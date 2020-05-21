@@ -1,0 +1,403 @@
+html {
+    height: 100%;
+    
+}
+
+body {
+   background: url(picts-popup/back.jpg) no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+     
+}
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: "Comfortaa", sans-serif;
+}
+
+.explanation {
+	background: var(--color);
+	grid-column: span 6;
+	padding: 28px;
+	color: #fff;
+	line-height: 1.7;
+	a {
+		text-decoration: none;
+		color: #fff;
+		padding: 3px 0;
+		border-bottom: 1px dashed;
+		&:hover {
+			border-bottom: 1px solid;
+		}
+	}
+}
+
+footer {
+	background: var(--color);
+	text-align: center;
+	width: 100%;
+	display: grid;
+	grid-auto-flow: column;
+	place-content: center;
+	a {
+		text-decoration: none;
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background: transparent;
+		border: 1px dashed #fff;
+		color: #fff;
+		margin: 0 5px;
+		&:hover {
+			background: rgba(0, 0, 0, 0.05);
+		}
+		.icons {
+			margin-top: 8px;
+			display: inline-block;
+			font-size: 20px;
+		}
+	}
+}
+
+.date {
+	background: var(--color);
+	padding: 15px;
+	position: relative;
+	font-size: 20px;
+}
+
+.month {
+	background: var(--color);
+	font: 900 75px "Montserrat", sans-serif;
+	text-transform: uppercase;
+	padding: 40px 30px;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.6);
+	text-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
+	&--feb {
+		grid-column: span 3;
+	}
+	&--mar {
+		grid-column: span 2;
+	}
+	&--title {
+		grid-column: span 6;
+		text-align: right;
+		padding-right: 60px;
+	}
+}
+
+.main-content {
+	display: grid;
+	grid-auto-flow: row;
+	grid-template-rows: repeat(10, 170px) 80px;
+	grid-template-columns: repeat(7, minmax(170px, 1fr));
+}
+
+.event {
+	z-index: 10;
+	background: transparent;
+	padding-top: 40px;
+	&__name {
+		background: rgba(255, 255, 255, 0.4);
+		border-radius: 20px;
+		height: auto;
+		padding: 10px;
+		margin: 10px;
+		font-size: 14px;
+	}
+	&--1 {
+		grid-column: 3 / span 2;
+		grid-row: 3;
+	}
+	&--2 {
+		grid-column: 4 / span 3;
+		grid-row: 3;
+		padding-top: 85px;
+	}
+	&--3 {
+		grid-column: 2;
+		grid-row: 6;
+	}
+	&--4a {
+		grid-column: 7;
+		grid-row: 7;
+		.event__name {
+			border-radius: 20px 0 0 20px;
+		}
+	}
+	&--4b {
+		grid-column: 1 / span 2;
+		grid-row: 8;
+		.event__name {
+			border-radius: 0 20px 20px 0;
+		}
+	}
+	&--5 {
+		grid-column: 5;
+		grid-row: 9;
+	}
+}
+
+//events
+
+div.date {
+	&:nth-child(15) {
+		grid-column: 3;
+		grid-row: 3;
+	}
+	&:nth-child(16) {
+		grid-column: 4;
+		grid-row: 3;
+	}
+	&:nth-child(17) {
+		grid-column: 5;
+		grid-row: 3;
+	}
+	&:nth-child(18) {
+		grid-column: 6;
+		grid-row: 3;
+	}
+	&:nth-child(34) {
+		grid-column: 2;
+		grid-row: 6;
+	}
+	&:nth-child(46) {
+		grid-column: 7;
+		grid-row: 7;
+	}
+	&:nth-child(47) {
+		grid-column: 1;
+		grid-row: 8;
+	}
+	&:nth-child(48) {
+		grid-column: 2;
+		grid-row: 8;
+	}
+	&:nth-child(58) {
+		grid-column: 5;
+		grid-row: 9;
+	}
+}
+
+//feb & march days
+.date {
+	&:after {
+		position: absolute;
+		z-index: 20;
+		top: 15px;
+		right: 15px;
+		font-size: 10px;
+		text-transform: uppercase;
+		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	}
+}
+
+
+
+
+#shadowbox {
+    position: fixed;
+    z-index: 998;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+#all{
+/*background: url('picts-popup/back.jpg');*/
+background-size:auto;
+background-repeat: no-repeat;
+background: green;
+    height: 100%;
+     
+    
+
+}
+
+.agent{
+  left: 700px;
+    padding: 0,0,0,0;
+    height: 0px;
+    top: 100px;}
+.Text{
+    position: fixed;
+    left: 680px;
+    font-size: 36px;
+    top: 200px;
+    text-align: center;
+}
+
+.Text2{
+    position: fixed;
+    left: 680px;
+    font-size: 36px;
+    top: 100px;
+    text-align: center;
+}
+
+
+.de{
+    position: fixed;
+    left: 680px;
+    top: 450px;
+    height: 25px;
+    width: 50px;
+    
+}
+  
+.ru{
+    position: fixed;
+    left: 800px;
+    top: 450px;
+    height: 25px;
+    width: 50px;
+    
+}
+
+.gb{
+    position: fixed;
+    left: 920px;
+    top: 450px;
+    height: 25px;
+    width: 50px;
+}
+
+
+.pl{
+    position: fixed;
+    left: 1040px;
+    top: 450px;
+    height: 25px;
+    width: 50px;
+}
+
+#banner {
+    position: fixed;
+    z-index: 999;
+    top: 50px;
+    left: 250px;
+   height: 590px;
+    width: 1020px;
+    background: lightgrey;
+    opacity: 97%;
+}
+
+#close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-family: Arial, Helvetica;
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+    position: fixed;
+    
+    
+}
+/*Buttons*/
+.button1 {background-color: lightblue;position: fixed;
+    left: 950px;
+    top: 400px;
+border-radius: 12px;} 
+.button2 {background-color: lightblue;position: fixed;
+    left: 750px;
+    top: 400px;
+    border-radius: 12px;
+} 
+/*QUESTIONAIRY*/
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+     
+}
+
+input[type=submit] {
+ /* width: 100%;*/
+  background-color: lightblue;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border-radius: 12px;
+    font: bold;
+    font-size: 12px;}
+
+
+input[type=submit]:hover {
+  background-color: blue;
+    color: white;
+    font: bold;
+}
+
+
+
+
+
+
+select#contry
+{height: 32px;}
+
+#Form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+     height: 380px;
+    width: 600px;
+    left: 300px;
+    padding-right: 10px;
+    margin-left: 350px;
+    margin-top: 150px;
+}
+#checkbox{margin-left: 400px;
+           margin-top: 150px;
+    
+}
+input[type="datetime-local" i]{
+    
+    margin-right: 50px;
+    border-radius: 8px;
+    width: 210px;
+    height: 25px;
+    text-align: right;
+}
+
+input[type="text_commentar"]{
+   
+    min-width: 100px;
+    min-height: 150px;
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    box-sizing: border-box
+    
+}
